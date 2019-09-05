@@ -1,0 +1,20 @@
+/**
+ * CraByFy Universal plugin for Craft CMS
+ *
+ * CraByFy CSS
+ *
+ * @author    Dunckelfeld
+ * @copyright Copyright (c) 2018 Dunckelfeld
+ * @link      dunckelfeld.de
+ * @package   CraByFyUniversal
+ * @since     1.0.0
+ */
+
+.crabyfy-universal-deploy-status {
+    text-align: center;
+}
+
+.crabyfy-universal-deploy-status a {
+    padding: .5rem;
+    display: block;
+}

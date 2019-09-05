@@ -1,0 +1,75 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * CraByFy Deployment plugin for Craft CMS 3.x
+ *
+ * CraByFy Deployment Settings.twig
+ *
+ * @author    Dunckelfeld
+ * @copyright Copyright (c) 2018 Dunckelfeld
+ * @link      dunckelfeld.de
+ * @package   CraftGatsbyNetlifyDeploy
+ * @since     1.0.0
+ */
+#}
+
+{% extends "_layouts/cp" %}
+
+{% set title = "CraByFy Universal"|t %}
+
+{% set content %}
+    <section>
+        <a href="/admin/settings/plugins/cra-by-fy-universal">Einstellungen</a>
+    </section>
+
+    <hr/>
+
+    {% if crabyfyUniversalPreviewDeployTriggerUrl|length or crabyfyUniversalPreviewUrl|length %}
+        <section>
+            <h1>Preview</h1>
+            {% if crabyfyUniversalPreviewDeployTriggerUrl|length %}
+                <p>Beim Speichern wird die Preview Seite automatisch aufgebaut. Hier kann der Aufbau manuell angestoßen
+                    werden</p>
+                <p><a href="{{ crabyfyUniversalPreviewDeployTriggerUrl }}" target="_blank" class="btn"
+                      id="crabyfy-universal-deploy-preview">Deploy Preview</a></p>
+            {% endif %}
+
+            {% if crabyfyUniversalPreviewDeployStatusBadge|length %}
+                <h2>Status</h2>
+                <p>{{ crabyfyUniversalPreviewDeployStatusBadge|raw }}</p>
+            {% endif %}
+
+            {% if crabyfyUniversalPreviewUrl|length %}
+                <a href="{{ crabyfyUniversalPreviewUrl }}" target="_blank">Zur Preview Seite</a>
+            {% endif %}
+        </section>
+    {% else %}
+        <p>Für die Preview Umgebung wurden noch keine URLs in den <a href="/admin/settings/plugins/cra-by-fy">Einstellungen</a>
+            eingetragen</p>
+    {% endif %}
+
+    <hr/>
+
+    {% if crabyfyUniversalLiveDeployTriggerUrl|length or crabyfyUniversalLiveUrl|length %}
+        <section>
+            <h1>Live</h1>
+            {% if crabyfyUniversalLiveDeployTriggerUrl|length %}
+                <p>Wenn auf der Preview Seite alles passt, können die Änderungen hier live geschaltet werden</p>
+                <p><a href="{{ crabyfyUniversalLiveDeployTriggerUrl }}" target="_blank" class="btn"
+                      id="crabyfy-universal-deploy-live">Deploy Live</a></p>
+            {% endif %}
+
+            {% if crabyfyUniversalLiveDeployStatusBadge|length %}
+                <h2>Status</h2>
+                <p>{{ crabyfyUniversalLiveDeployStatusBadge|raw }}</p>
+            {% endif %}
+
+            {% if crabyfyUniversalLiveUrl|length %}
+                <a href="{{ crabyfyUniversalLiveUrl }}" target="_blank">Zur Live Seite</a>
+            {% endif %}
+        </section>
+    {% else %}
+        <p>Für die Live Umgebung wurden noch keine URLs in den <a
+                    href="/admin/settings/plugins/cra-by-fy-universal">Einstellungen</a> eingetragen</p>
+    {% endif %}
+{% endset %}

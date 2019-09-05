@@ -1,0 +1,22 @@
+{# /**
+ * CraByFy Universal plugin for Craft CMS 3.x
+ *
+ * @author    Dunckelfeld
+ * @copyright Copyright (c) 2018 Dunckelfeld
+ * @link      dunckelfeld.de
+ * @package   CraByFy Universal
+ * @since     1.0.0
+ */
+#}
+
+{# Not sure if this is an okay approach but it works – sooo, unless someone can point me to best practice... ~seamofreality #}
+<script>
+    {% if crabyfyUniversalPreviewDeployStatusBadge is defined %}
+    var crabyfyUniversalPreviewDeployStatusBadge = '{{ crabyfyUniversalPreviewDeployStatusBadge|escape('js') }}';
+    {% endif %}
+
+    {% if crabyfyUniversalLiveDeployStatusBadge is defined %}
+    var crabyfyUniversalLiveDeployStatusBadge = '{{ crabyfyUniversalLiveDeployStatusBadge|escape('js') }}';
+    {% endif %}
+</script>
+{% do view.registerAssetBundle("dunckelfeld\\crabyfyuniversal\\CraByFyUniversalAssets") %}

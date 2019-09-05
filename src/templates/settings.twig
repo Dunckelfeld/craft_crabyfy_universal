@@ -1,0 +1,72 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * CraByFy Deployment plugin for Craft CMS 3.x
+ *
+ * CraByFy Deployment Settings.twig
+ *
+ * @author    Dunckelfeld
+ * @copyright Copyright (c) 2018 Dunckelfeld
+ * @link      dunckelfeld.de
+ * @package   CraftGatsbyNetlifyDeploy
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+<h2>Preview</h2>
+{{ forms.textField({
+    label: 'Preview URL',
+    instructions: 'For example https://staging.domain.tld',
+    id: 'crabyfyUniversalPreviewUrl',
+    name: 'crabyfyUniversalPreviewUrl',
+    value: settings.crabyfyUniversalPreviewUrl
+}) }}
+
+{{ forms.textField({
+    label: 'Preview Deployment Trigger URL',
+    instructions: 'For example https://api.netlify.com/build_hooks/xxx',
+    id: 'crabyfyUniversalPreviewDeployTriggerUrl',
+    name: 'crabyfyUniversalPreviewDeployTriggerUrl',
+    value: settings.crabyfyUniversalPreviewDeployTriggerUrl
+}) }}
+
+{{ forms.textareaField({
+    label: 'Preview Deployment Status Badge',
+    id: 'crabyfyUniversalPreviewDeployStatusBadge',
+    name: 'crabyfyUniversalPreviewDeployStatusBadge',
+    rows: 3,
+    value: settings.crabyfyUniversalPreviewDeployStatusBadge
+}) }}
+
+<h2>Live</h2>
+{{ forms.textField({
+    label: 'Live URL',
+    instructions: 'For example https://domain.tld',
+    id: 'crabyfyUniversalLiveUrl',
+    name: 'crabyfyUniversalLiveUrl',
+    value: settings.crabyfyUniversalLiveUrl
+}) }}
+
+{{ forms.textField({
+    label: 'Live Deployment Trigger URL',
+    instructions: 'For example https://api.netlify.com/build_hooks/xxx',
+    id: 'crabyfyUniversalLiveDeployTriggerUrl',
+    name: 'crabyfyUniversalLiveDeployTriggerUrl',
+    value: settings.crabyfyUniversalLiveDeployTriggerUrl
+}) }}
+
+{{ forms.textareaField({
+    label: 'Live Deployment Status Badge',
+    id: 'crabyfyUniversalLiveDeployStatusBadge',
+    name: 'crabyfyUniversalLiveDeployStatusBadge',
+    rows: 3,
+    value: settings.crabyfyUniversalLiveDeployStatusBadge
+}) }}
+
+<h2>Help</h2>
+<h4>How do I get a status badge?</h4>
+<p>See documentation for <a href="https://docs.gitlab.com/ee/user/project/pipelines/settings.html#pipeline-badges"
+                            target="_blank">GitLab</a>
+    or <a href="https://www.netlify.com/docs/continuous-deployment/#status-badges" target="_blank">Netlify</a>.</p>
