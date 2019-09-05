@@ -36,7 +36,7 @@
     "name": "CraByFy Universal",
     "handle": "cra-by-fy-universal",
     "hasCpSettings": true,
-    "hasCpSection": true,
+    "hasCpSection": false,
     "changelogUrl": "https://raw.githubusercontent.com/Dunckelfeld/craft_crabyfy_universal/master/CHANGELOG.md",
     "class": "dunckelfeld\\crabyfyuniversal\\CraByFyUniversal"
   }
