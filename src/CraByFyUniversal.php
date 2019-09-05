@@ -10,23 +10,13 @@
 
 namespace dunckelfeld\crabyfyuniversal;
 
-use dunckelfeld\crabyfyuniversal\services\Deploy as DeployService;
 use dunckelfeld\crabyfyuniversal\models\Settings;
 
 use Craft;
 use craft\base\Plugin;
-use craft\services\Plugins;
-use craft\events\PluginEvent;
-use craft\events\ModelEvent;
-use craft\fields\Matrix;
-use craft\services\Elements;
-use craft\elements\Entry;
 use craft\events\RegisterCpNavItemsEvent;
 use craft\web\twig\variables\Cp;
-use craft\web\UrlManager;
-use craft\events\RegisterUrlRulesEvent;
 
-use craft\events\ElementEvent;
 use yii\base\Event;
 
 
@@ -44,7 +34,6 @@ use yii\base\Event;
  * @package   CraByFyUniversal
  * @since     1.0.0
  *
- * @property  DeployService $deploy
  * @property  Settings $settings
  * @method    Settings getSettings()
  */
@@ -90,21 +79,7 @@ class CraByFyUniversal extends Plugin
         parent::init();
         self::$plugin = $this;
 
-        $this->setComponents([
-            'deploy' => \dunckelfeld\crabyfyuniversal\services\Deploy::class,
-        ]);
-
-        // Do something after we're installed
-        Event::on(
-            Plugins::class,
-            Plugins::EVENT_AFTER_INSTALL_PLUGIN,
-            function (PluginEvent $event) {
-                if ($event->plugin === $this) {
-                    // We were just installed
-                }
-            }
-        );
-
+        // Create section in control panel menu.
         Event::on(
             Cp::class,
             Cp::EVENT_REGISTER_CP_NAV_ITEMS,
@@ -112,15 +87,17 @@ class CraByFyUniversal extends Plugin
                 $event->navItems[] = [
                     'url'   => '/admin/actions/cra-by-fy-universal/deploy',
                     'label' => 'CraByFy',
-                    'icon'  => '@dunckelfeld/crabyfy-universal/icon.svg',
+                    'icon'  => '@dunckelfeld/crabyfyuniversal/icon.svg',
                 ];
             }
         );
 
+        // Add deploy status badges and deploy button logic.
         Craft::$app->getView()->hook('cp.layouts.base', function (array &$context) {
             return $this->deployButtonAssets();
         });
 
+        // Modify preview button on entries edit pages.
         Craft::$app->getView()->hook('cp.entries.edit.details', function (array &$context) {
             return $this->previewButton($context['entry']['uri']);
         });
@@ -177,8 +154,8 @@ class CraByFyUniversal extends Plugin
         $settings = CraByFyUniversal::$plugin->getSettings();
 
         $variables = [
-            'crabyfyPreviewDeployStatusBadge' => $settings['crabyfyPreviewDeployStatusBadge'],
-            'crabyfyLiveDeployStatusBadge' => $settings['crabyfyLiveDeployStatusBadge'],
+            'crabyfyUniversalPreviewDeployStatusBadge' => $settings['crabyfyUniversalPreviewDeployStatusBadge'],
+            'crabyfyUniversalLiveDeployStatusBadge'    => $settings['crabyfyUniversalLiveDeployStatusBadge'],
         ];
 
         return Craft::$app->view->renderTemplate(
@@ -202,7 +179,8 @@ class CraByFyUniversal extends Plugin
         ];
 
         return Craft::$app->view->renderTemplate(
-            'cra-by-fy-universal/previewButton', $variables
+            'cra-by-fy-universal/previewButton',
+            $variables
         );
     }
 

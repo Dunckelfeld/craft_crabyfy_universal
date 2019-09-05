@@ -54,8 +54,13 @@
     var appDeployEl = document.createElement('div');
 
     appDeployEl.classList.add('crabyfy-universal-deploy-status');
-    appDeployEl.innerHTML = crabyfyUniversalPreviewDeployStatusBadge;
-    appDeployEl.innerHTML += crabyfyUniversalLiveDeployStatusBadge;
+    appDeployEl.innerHTML =
+        '<div class="crabyfy-universal-deploy-status__preview" title="Preview Deploy Status">'
+        + crabyfyUniversalPreviewDeployStatusBadge
+        + '</div>'
+        + '<div class="crabyfy-universal-deploy-status__live" title="Live Deploy Status">'
+        + crabyfyUniversalLiveDeployStatusBadge
+        + '</div>';
 
     appGlobalSidebarEl.insertBefore(appDeployEl, appInfoEl);
 })();

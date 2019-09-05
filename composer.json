@@ -1,6 +1,6 @@
 {
   "name": "dunckelfeld/cra-by-fy-universal",
-  "description": "Plugin to trigger deployment via webhooks from craft cms backend\n\n",
+  "description": "Plugin to trigger deployment via webhooks from craft cms backend",
   "type": "craft-plugin",
   "version": "1.0.1",
   "keywords": [
@@ -14,7 +14,7 @@
     "deployment"
   ],
   "support": {
-    "docs": "https://raw.githubusercontent.com/Dunckelfeld/craft_crabyfy_universal/master/README.md",
+    "docs": "https://github.com/Dunckelfeld/craft_crabyfy_universal",
     "issues": "https://github.com/Dunckelfeld/craft_crabyfy_universal/issues"
   },
   "license": "MIT",
@@ -36,11 +36,8 @@
     "name": "CraByFy Universal",
     "handle": "cra-by-fy-universal",
     "hasCpSettings": true,
-    "hasCpSection": false,
+    "hasCpSection": true,
     "changelogUrl": "https://raw.githubusercontent.com/Dunckelfeld/craft_crabyfy_universal/master/CHANGELOG.md",
-    "components": {
-      "deploy": "dunckelfeld\\crabyfyuniversal\\services\\Deploy"
-    },
     "class": "dunckelfeld\\crabyfyuniversal\\CraByFyUniversal"
   }
 }
