@@ -41,6 +41,6 @@
     "components": {
       "deploy": "dunckelfeld\\crabyfyuniversal\\services\\Deploy"
     },
-    "class": "dunckelfeld\\crabyfyuniversal\\CraByFy"
+    "class": "dunckelfeld\\crabyfyuniversal\\CraByFyUniversal"
   }
 }
