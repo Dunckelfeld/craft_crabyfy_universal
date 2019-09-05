@@ -86,7 +86,7 @@ class CraByFyUniversal extends Plugin
             function (RegisterCpNavItemsEvent $event) {
                 $event->navItems[] = [
                     'url'   => '/admin/actions/cra-by-fy-universal/deploy',
-                    'label' => 'CraByFy',
+                    'label' => 'Deployment',
                     'icon'  => '@dunckelfeld/crabyfyuniversal/icon.svg',
                 ];
             }
