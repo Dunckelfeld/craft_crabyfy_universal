@@ -26,6 +26,6 @@ Visit `/admin/settings/plugins/cra-by-fy-universal` and set up urls, hooks and b
 
 ## Using CraByFy
 
-Visit `/admin/actions/cra-by-fy/deploy` to deploy to staging or production.
+Visit `/admin/actions/cra-by-fy-universal/deploy` to deploy to staging or production.
 
 Brought to you by [Dunckelfeld](dunckelfeld.de) 🤓
