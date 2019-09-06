@@ -2,7 +2,7 @@
   "name": "dunckelfeld/cra-by-fy-universal",
   "description": "Plugin to trigger deployment via webhooks from craft cms backend",
   "type": "craft-plugin",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "keywords": [
     "craft",
     "cms",
