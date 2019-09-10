@@ -30,13 +30,9 @@
             {% if crabyfyUniversalPreviewDeployTriggerUrl|length %}
                 <p>Beim Speichern wird die Preview Seite automatisch aufgebaut. Hier kann der Aufbau manuell angestoßen
                     werden</p>
-                <p><a href="{{ crabyfyUniversalPreviewDeployTriggerUrl }}" target="_blank" class="btn"
+                <p><a href="{{ crabyfyUniversalPreviewDeployTriggerUrl }}" target="_blank"
+                      class="btn crabyfy-universal-deploy-indicator crabyfy-universal-deploy-indicator--preview"
                       id="crabyfy-universal-deploy-preview">Deploy Preview</a></p>
-            {% endif %}
-
-            {% if crabyfyUniversalPreviewDeployStatusBadge|length %}
-                <h2>Status</h2>
-                <p>{{ crabyfyUniversalPreviewDeployStatusBadge|raw }}</p>
             {% endif %}
 
             {% if crabyfyUniversalPreviewUrl|length %}
@@ -55,13 +51,9 @@
             <h1>Live</h1>
             {% if crabyfyUniversalLiveDeployTriggerUrl|length %}
                 <p>Wenn auf der Preview Seite alles passt, können die Änderungen hier live geschaltet werden</p>
-                <p><a href="{{ crabyfyUniversalLiveDeployTriggerUrl }}" target="_blank" class="btn"
+                <p><a href="{{ crabyfyUniversalLiveDeployTriggerUrl }}" target="_blank"
+                      class="btn crabyfy-universal-deploy-indicator crabyfy-universal-deploy-indicator--live"
                       id="crabyfy-universal-deploy-live">Deploy Live</a></p>
-            {% endif %}
-
-            {% if crabyfyUniversalLiveDeployStatusBadge|length %}
-                <h2>Status</h2>
-                <p>{{ crabyfyUniversalLiveDeployStatusBadge|raw }}</p>
             {% endif %}
 
             {% if crabyfyUniversalLiveUrl|length %}

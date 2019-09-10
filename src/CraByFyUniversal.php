@@ -85,6 +85,7 @@ class CraByFyUniversal extends Plugin
             Cp::EVENT_REGISTER_CP_NAV_ITEMS,
             function (RegisterCpNavItemsEvent $event) {
                 $event->navItems[] = [
+                    'id'    => 'nav-crabify-universal',
                     'url'   => '/admin/actions/cra-by-fy-universal/deploy',
                     'label' => 'Deployment',
                     'icon'  => '@dunckelfeld/crabyfyuniversal/icon.svg',
@@ -154,8 +155,8 @@ class CraByFyUniversal extends Plugin
         $settings = CraByFyUniversal::$plugin->getSettings();
 
         $variables = [
-            'crabyfyUniversalPreviewDeployStatusBadge' => $settings['crabyfyUniversalPreviewDeployStatusBadge'],
-            'crabyfyUniversalLiveDeployStatusBadge'    => $settings['crabyfyUniversalLiveDeployStatusBadge'],
+            'crabyfyUniversalPreviewDeployStatusEndpoint' => $settings['crabyfyUniversalPreviewDeployStatusEndpoint'],
+            'crabyfyUniversalLiveDeployStatusEndpoint'    => $settings['crabyfyUniversalLiveDeployStatusEndpoint'],
         ];
 
         return Craft::$app->view->renderTemplate(

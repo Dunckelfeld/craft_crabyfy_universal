@@ -2,7 +2,7 @@
 
 Based on the [CraByFy plugin](https://github.com/Dunckelfeld/craft_crabyfy), 
 CraByFy Universal can be used to simply 
-trigger any deployment link for preview and live deployment 
+trigger a gitlab pipeline hook for preview and live deployment 
 via craft cms backend.
 
 ![Screenshot](resources/img/crabyfy.png)
@@ -22,7 +22,7 @@ This plugin requires Craft CMS 3.0.0 or later.
 
 ## Configuring CraByFy
 
-Visit `/admin/settings/plugins/cra-by-fy-universal` and set up urls, hooks and badges for status updates.
+Visit `/admin/settings/plugins/cra-by-fy-universal` and set up urls, hooks to trigger pipelines.
 
 ## Using CraByFy
 

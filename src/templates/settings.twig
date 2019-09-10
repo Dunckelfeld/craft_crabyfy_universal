@@ -32,12 +32,12 @@
     value: settings.crabyfyUniversalPreviewDeployTriggerUrl
 }) }}
 
-{{ forms.textareaField({
-    label: 'Preview Deployment Status Badge',
-    id: 'crabyfyUniversalPreviewDeployStatusBadge',
-    name: 'crabyfyUniversalPreviewDeployStatusBadge',
-    rows: 3,
-    value: settings.crabyfyUniversalPreviewDeployStatusBadge
+{{ forms.textField({
+    label: 'Preview Deployment Status Endpoint',
+    instructions: 'For example https://gitlab.com/api/v4/projects/xxx/pipelines',
+    id: 'crabyfyUniversalPreviewDeployStatusEndpoint',
+    name: 'crabyfyUniversalPreviewDeployStatusEndpoint',
+    value: settings.crabyfyUniversalPreviewDeployStatusEndpoint
 }) }}
 
 <h2>Live</h2>
@@ -57,16 +57,10 @@
     value: settings.crabyfyUniversalLiveDeployTriggerUrl
 }) }}
 
-{{ forms.textareaField({
-    label: 'Live Deployment Status Badge',
-    id: 'crabyfyUniversalLiveDeployStatusBadge',
-    name: 'crabyfyUniversalLiveDeployStatusBadge',
-    rows: 3,
-    value: settings.crabyfyUniversalLiveDeployStatusBadge
+{{ forms.textField({
+    label: 'Live Deployment Status Endpoint',
+    instructions: 'For example https://gitlab.com/api/v4/projects/xxx/pipelines',
+    id: 'crabyfyUniversalLiveDeployStatusEndpoint',
+    name: 'crabyfyUniversalLiveDeployStatusEndpoint',
+    value: settings.crabyfyUniversalLiveDeployStatusEndpoint
 }) }}
-
-<h2>Help</h2>
-<h4>How do I get a status badge?</h4>
-<p>See documentation for <a href="https://docs.gitlab.com/ee/user/project/pipelines/settings.html#pipeline-badges"
-                            target="_blank">GitLab</a>
-    or <a href="https://www.netlify.com/docs/continuous-deployment/#status-badges" target="_blank">Netlify</a>.</p>

@@ -11,12 +11,12 @@
 
 {# Not sure if this is an okay approach but it works – sooo, unless someone can point me to best practice... ~seamofreality #}
 <script>
-    {% if crabyfyUniversalPreviewDeployStatusBadge is defined %}
-    var crabyfyUniversalPreviewDeployStatusBadge = '{{ crabyfyUniversalPreviewDeployStatusBadge|escape('js') }}';
+    {% if crabyfyUniversalPreviewDeployStatusEndpoint is defined %}
+    var crabyfyUniversalPreviewDeployStatusEndpoint = '{{ crabyfyUniversalPreviewDeployStatusEndpoint|escape('js') }}';
     {% endif %}
 
-    {% if crabyfyUniversalLiveDeployStatusBadge is defined %}
-    var crabyfyUniversalLiveDeployStatusBadge = '{{ crabyfyUniversalLiveDeployStatusBadge|escape('js') }}';
+    {% if crabyfyUniversalLiveDeployStatusEndpoint is defined %}
+    var crabyfyUniversalLiveDeployStatusEndpoint = '{{ crabyfyUniversalLiveDeployStatusEndpoint|escape('js') }}';
     {% endif %}
 </script>
 {% do view.registerAssetBundle("dunckelfeld\\crabyfyuniversal\\CraByFyUniversalAssets") %}

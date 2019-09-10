@@ -1,43 +1,43 @@
 {
-  "name": "dunckelfeld/cra-by-fy-universal",
-  "description": "Plugin to trigger deployment via webhooks from craft cms backend",
-  "type": "craft-plugin",
-  "version": "1.0.5",
-  "keywords": [
-    "craft",
-    "cms",
-    "craftcms",
-    "craft-plugin",
-    "crabyfy",
-    "gitlab",
-    "netlify",
-    "deployment"
-  ],
-  "support": {
-    "docs": "https://github.com/Dunckelfeld/craft_crabyfy_universal",
-    "issues": "https://github.com/Dunckelfeld/craft_crabyfy_universal/issues"
-  },
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Dunckelfeld",
-      "homepage": "https://dunckelfeld.de"
+    "name": "dunckelfeld/cra-by-fy-universal",
+    "description": "Plugin to trigger deployment via webhooks from craft cms backend",
+    "type": "craft-plugin",
+    "version": "2.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "crabyfy",
+        "gitlab",
+        "netlify",
+        "deployment"
+    ],
+    "support": {
+        "docs": "https://github.com/Dunckelfeld/craft_crabyfy_universal",
+        "issues": "https://github.com/Dunckelfeld/craft_crabyfy_universal/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dunckelfeld",
+            "homepage": "https://dunckelfeld.de"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "dunckelfeld\\crabyfyuniversal\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "CraByFy Universal",
+        "handle": "cra-by-fy-universal",
+        "hasCpSettings": true,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/Dunckelfeld/craft_crabyfy_universal/master/CHANGELOG.md",
+        "class": "dunckelfeld\\crabyfyuniversal\\CraByFyUniversal"
     }
-  ],
-  "require": {
-    "craftcms/cms": "^3.0.0"
-  },
-  "autoload": {
-    "psr-4": {
-      "dunckelfeld\\crabyfyuniversal\\": "src/"
-    }
-  },
-  "extra": {
-    "name": "CraByFy Universal",
-    "handle": "cra-by-fy-universal",
-    "hasCpSettings": true,
-    "hasCpSection": false,
-    "changelogUrl": "https://raw.githubusercontent.com/Dunckelfeld/craft_crabyfy_universal/master/CHANGELOG.md",
-    "class": "dunckelfeld\\crabyfyuniversal\\CraByFyUniversal"
-  }
 }

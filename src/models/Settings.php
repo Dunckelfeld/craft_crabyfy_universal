@@ -49,11 +49,11 @@ class Settings extends Model
     public $crabyfyUniversalPreviewDeployTriggerUrl = '';
 
     /**
-     * Preview Deploy Status Badge
+     * Preview Deploy Status Endpoint
      *
      * @var string
      */
-    public $crabyfyUniversalPreviewDeployStatusBadge = '';
+    public $crabyfyUniversalPreviewDeployStatusEndpoint = '';
 
     /**
      * Live URL
@@ -70,11 +70,11 @@ class Settings extends Model
     public $crabyfyUniversalLiveDeployTriggerUrl = '';
 
     /**
-     * Live Deploy Status Badge
+     * Live Deploy Status Endpoint
      *
      * @var string
      */
-    public $crabyfyUniversalLiveDeployStatusBadge = '';
+    public $crabyfyUniversalLiveDeployStatusEndpoint = '';
 
 
     // Public Methods
@@ -95,10 +95,10 @@ class Settings extends Model
         return [
             ['crabyfyUniversalPreviewUrl', 'default', 'value' => ''],
             ['crabyfyUniversalPreviewDeployTriggerUrl', 'default', 'value' => ''],
-            ['crabyfyUniversalPreviewDeployStatusBadge', 'default', 'value' => ''],
+            ['crabyfyUniversalPreviewDeployStatusEndpoint', 'default', 'value' => ''],
             ['crabyfyUniversalLiveUrl', 'default', 'value' => ''],
             ['crabyfyUniversalLiveDeployTriggerUrl', 'default', 'value' => ''],
-            ['crabyfyUniversalLiveDeployStatusBadge', 'default', 'value' => ''],
+            ['crabyfyUniversalLiveDeployStatusEndpoint', 'default', 'value' => ''],
         ];
     }
 }

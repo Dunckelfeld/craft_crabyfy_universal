@@ -10,6 +10,12 @@
  * @since     1.0.0
  */
 
+/* Detail page preview button */
+#details #crabify-universal-entry-preview {
+    margin: 24px;
+}
+
+/* Indicator inside sidebar */
 .crabyfy-universal-deploy-status {
     text-align: center;
 }
@@ -19,6 +25,46 @@
     display: block;
 }
 
-.btnpreviewdeploy {
-    margin: 24px 0 12px 24px;
+.crabyfy-universal-deploy-status__item {
+    position: relative;
+    color: #d7d9db;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 10px;
+}
+
+.crabyfy-universal-deploy-indicator::after {
+    position: relative;
+    display: inline-block;
+}
+
+/* Indicator inside button */
+.btn.crabyfy-universal-deploy-indicator {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.crabyfy-universal-deploy-indicator::after {
+    width: 10px;
+    height: 10px;
+    content: '';
+    border-radius: 50%;
+    margin-left: 12px;
+    transition: background 500ms ease-out;
+    background: #ecebeb;
+}
+
+.status--success::after {
+    background: green;
+}
+
+.status--error::after {
+    background: red;
+}
+
+.status--running::after {
+    background: orange;
 }

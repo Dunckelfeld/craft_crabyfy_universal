@@ -68,12 +68,12 @@ class DeployController extends Controller
         $settings = CraByFyUniversal::$plugin->getSettings();
 
         $variables = [
-            'crabyfyUniversalPreviewUrl'               => $settings['crabyfyUniversalPreviewUrl'],
-            'crabyfyUniversalPreviewDeployTriggerUrl'  => $settings['crabyfyUniversalPreviewDeployTriggerUrl'],
-            'crabyfyUniversalPreviewDeployStatusBadge' => $settings['crabyfyUniversalPreviewDeployStatusBadge'],
-            'crabyfyUniversalLiveUrl'                  => $settings['crabyfyUniversalLiveUrl'],
-            'crabyfyUniversalLiveDeployTriggerUrl'     => $settings['crabyfyUniversalLiveDeployTriggerUrl'],
-            'crabyfyUniversalLiveDeployStatusBadge'    => $settings['crabyfyUniversalLiveDeployStatusBadge'],
+            'crabyfyUniversalPreviewUrl'                  => $settings['crabyfyUniversalPreviewUrl'],
+            'crabyfyUniversalPreviewDeployTriggerUrl'     => $settings['crabyfyUniversalPreviewDeployTriggerUrl'],
+            'crabyfyUniversalPreviewDeployStatusEndpoint' => $settings['crabyfyUniversalPreviewDeployStatusEndpoint'],
+            'crabyfyUniversalLiveUrl'                     => $settings['crabyfyUniversalLiveUrl'],
+            'crabyfyUniversalLiveDeployTriggerUrl'        => $settings['crabyfyUniversalLiveDeployTriggerUrl'],
+            'crabyfyUniversalLiveDeployStatusEndpoint'    => $settings['crabyfyUniversalLiveDeployStatusEndpoint'],
         ];
 
         return $this->renderTemplate('cra-by-fy-universal', $variables);
